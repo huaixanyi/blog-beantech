@@ -3,7 +3,6 @@
 > This BeanTech theme created by [YuHsuan](http://beantech.org) modified from the original Porter [Kaijun](http://kaijun.rocks/hexo-theme-huxblog/)
 
 # [Live Demo](http://beantech.org)
-![BeanTech Desktop](http://beantech.org/img/beantech-desktop.png)
 
 # Usage
 I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customiz your own blog!
@@ -16,6 +15,17 @@ git clone https://github.com//hexo-theme-beantech.git ./hexo-beantech
 cd hexo-beantech
 npm install
 ```
+
+## TOC
+model -> hexo/lib/plugins/helper/toc.js
+modify
+`const id = getId(this);`
+to
+`const id = toc.slugify(text, options);`
+and add
+`var toc = require('markdown-toc');`
+at file head
+
 
 ## Modify
 Modify `_config.yml` file with your own info.
