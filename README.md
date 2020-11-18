@@ -19,11 +19,17 @@ npm install
 ## TOC
 model -> hexo/lib/plugins/helper/toc.js
 modify
-`const id = getId(this);`
+```bash
+const id = getId(this);
+```
 to
-`const id = toc.slugify(text, options);`
+```bash 
+const id = toc.slugify(text, options);
+```
 and add
+```bash 
 `var toc = require('markdown-toc');`
+```
 at file head
 
 
